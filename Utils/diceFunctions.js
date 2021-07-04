@@ -1,10 +1,5 @@
 module.exports = {
-    values : {
-        roll_20 : "Rolou um vinte!",
-        roll_normal : "Rolou: "
-    },
     rollSimpleDice : rollSimpleDice,
-
 };
 
 function rollSimpleDice (rollTimes = 1, rollSizes = 1) {

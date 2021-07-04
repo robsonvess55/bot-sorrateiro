@@ -10,7 +10,6 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-
   if (msg.content.startsWith(process.env.BOT_PREFIX)) {
     let query = msg.content.replace(process.env.BOT_PREFIX, "");
     switch (query.split(' ')[0]){
@@ -20,8 +19,14 @@ client.on('message', msg => {
       case 'test' :
         discordController.test(msg);
         break;
+      case 'image' :
+        discordController.randomImage(msg);
+        break;
+      case 'dm' :
+        discordController.dmTest(msg);
+        break;
       default : 
-         discordController.notFound(msg);
+        discordController.notFound(msg);
     }
   }
 });
