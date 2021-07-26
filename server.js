@@ -25,6 +25,9 @@ client.on('message', msg => {
       case 'dm' :
         discordController.dmTest(msg);
         break;
+      case 'register' :
+        discordController.register(msg);
+        break;
       case 'idtest' :
         //msg.reply(msg.mentions.users.entries().next().value[1].send('teste testado'));
         //console.log(msg.mentions.users.entries().next().value[0]);

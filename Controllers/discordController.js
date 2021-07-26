@@ -1,8 +1,11 @@
+const axios = require('axios');
+
 module.exports = {
     test : test,
     notFound : notFound,
     randomImage : randomImage,
-    dmTest : dmTest
+    dmTest : dmTest,
+    register : register
 };
 let duels = [];
 function test (msg) {
@@ -19,4 +22,17 @@ function randomImage (msg) {
 
 function dmTest(msg) {
     msg.author.send('Greetings traveler!');
+}
+
+function register(msg) {
+    axios.post(process.env.API_URL+'discord/register', {
+        'discord_id' : msg.author.id
+    }).then(response => {
+        console.log(response)
+        msg.author.send(response.data);
+    })
+    .catch(error => {
+        msg.author.send('Houve um erro na requisição');
+        console.log(error);
+    });
 }
