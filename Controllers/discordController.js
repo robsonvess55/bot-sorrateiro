@@ -19,7 +19,8 @@ class DiscordController {
 
   register(msg) {
     axios.post(process.env.API_URL + 'discord/register', {
-      'discord_id': msg.author.id
+      'discord_id': msg.author.id,
+      'name' : msg.author.username
     })
     .then(response => {
       console.log(response)
