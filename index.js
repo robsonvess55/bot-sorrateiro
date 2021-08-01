@@ -1,9 +1,12 @@
 require('dotenv').config();
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const DiceController = require('./Controllers/DiceController');
+const DiscordController = require('./Controllers/DiscordController');
 
-const diceController = require('./Controllers/diceController');
-const discordController = require('./Controllers/discordController');
+let discordController = new DiscordController();
+let diceController = new DiceController();
+let client = new Discord.Client();
+
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
