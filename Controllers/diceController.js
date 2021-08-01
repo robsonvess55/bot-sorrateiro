@@ -9,6 +9,7 @@ class DiceController {
     let values = query.split("d");
     let roll = diceService.rollSimpleDice(values[0], values[1]);
     let message = `:game_die: ${msg.author.username} rolou ${ roll.total_roll_value } dos valores [${roll.roll_values.concat()}]`;
+    msg.reply(message);
   }
 }
 

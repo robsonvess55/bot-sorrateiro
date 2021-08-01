@@ -8,7 +8,7 @@ class DiceService {
       total_roll_value += result;
       roll_values.push(result);
     }
-
+    
     return {
       "total_roll_value": total_roll_value,
       "roll_values": roll_values
