@@ -42,6 +42,7 @@ client.on('message', msg => {
         discordController.notFound(msg);
     }
   }
+  //testing remote
 });
 
 client.login(process.env.DISCORD_TOKEN);
