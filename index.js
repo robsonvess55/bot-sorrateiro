@@ -11,7 +11,7 @@ let client = new Discord.Client();
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
-//teste iashuiuashdiuahsduias
+//teste iashuiuashdiuahsduiasasdasd
 
 client.on('message', msg => {
   if (msg.content.startsWith(process.env.BOT_PREFIX)) {
